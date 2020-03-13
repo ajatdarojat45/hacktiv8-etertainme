@@ -7,8 +7,8 @@ const dbName = 'hacktiv8';
 module.exports = function () {
   return async function (req, res, next) {
     try {
-      const mongo = await MongoClient.connect(url);
-      const db = await mongo.db(dbName);
+      const client = await MongoClient.connect(url);
+      const db = await client.db(dbName);
       req.db = db;
       next();
     } catch (error) {
