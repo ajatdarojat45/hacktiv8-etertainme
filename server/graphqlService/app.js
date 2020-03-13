@@ -1,6 +1,7 @@
 const {ApolloServer} = require('apollo-server');
 const movie = require('./schemas/movie');
 const tv = require('./schemas/tv');
+const etertainme = require('./schemas/etertainme');
 
 const typeDefs = `
   type Query
@@ -8,8 +9,8 @@ const typeDefs = `
 `
 
 const schema = {
-  typeDefs: [typeDefs, tv.typeDefs, movie.typeDefs],
-  resolvers: [tv.resolvers, movie.resolvers]
+  typeDefs: [typeDefs, tv.typeDefs, etertainme.typeDefs, movie.typeDefs],
+  resolvers: [tv.resolvers, movie.resolvers, etertainme.resolvers],
 }
 
 const server = new ApolloServer(schema);
