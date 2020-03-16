@@ -25,7 +25,7 @@ const typeDefs = gql`
   }
 `;
 
-const url = "http://localhost:3000/tv"
+const url = "http://localhost:3002"
 
 const resolvers = {
   Query: {
