@@ -10,7 +10,7 @@ const typeDefs = gql`
     overview: String
     poster_path: String
     popularity: Int
-    tags: Array
+    tags: [String]
   },
 
   extend type Query{
@@ -22,7 +22,7 @@ const typeDefs = gql`
       title: String, 
       overview: String,
       poster_path: String
-      tags: Array
+      tags: [String]
     ): Movie
   }
 `;
